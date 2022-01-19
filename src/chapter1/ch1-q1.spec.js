@@ -4,7 +4,7 @@ import * as funcs from "./ch1-q1";
 for (let key in funcs) {
   let func = funcs[key];
 
-  describe.only("ch1-q1: " + key, function () {
+  describe("ch1-q1: " + key, function () {
     [
       "abcdefghi",
       "jklpoiuqwerzxcvmnsadf",
