@@ -5,9 +5,6 @@
  * str2 has a character different to str2 or if any characters are left over
  * at the end.
  *
- * N = |str1| && M = |str2|
- * Time: O(N + M)
- * Additional space: O(N)
  *
  * @param  {string[]} str2 First string, passed in as a character array
  * @param  {string[]} str1 Second string, passed in as a character array
@@ -58,7 +55,7 @@ export function isPermutationMap(str1, str2) {
   Also, in the event there is an even number of a character in one string, and an even number of a different
   character in the other string we will get true as the strings are the same length but have unique characters
   and can not be permutations.
-  
+
   To check for this we compare map1 and map2 to be sure each character occurs both strings.
   */
 
