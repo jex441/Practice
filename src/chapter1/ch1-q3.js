@@ -41,6 +41,5 @@ export function encodeSpaces(url) {
   }
 
   // Return result. Tests expect it to be in array form, not string, so split at "".
-  console.log(result.split(""));
   return result.split("");
 }
