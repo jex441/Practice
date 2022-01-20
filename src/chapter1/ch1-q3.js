@@ -21,5 +21,5 @@ export function encodeSpaces(url) {
       map[i] = url[i];
     }
   }
-  console.log(map);
+  console.log(map); //test
 }
