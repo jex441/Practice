@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * Count the number of spaces in the string to calculate the new length of the
@@ -12,5 +12,5 @@
  * @return {string[]}     Updated URL character array
  */
 export function encodeSpaces(url) {
-  
+  console.log(url);
 }
