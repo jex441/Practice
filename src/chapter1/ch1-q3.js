@@ -5,7 +5,7 @@
  * string and move characters back where required replacing spaces with %20.
  *
  *
- * input "Mr John Smith" => "[M][r][%20][J][o][h][n][%20][S][m][i][t][h]"
+ * input "Mr John Smith" => "['M','r','%','2','0','J','o','h','n','%','2','0','S','m','i','t','h']"
  *
  * @param  {string[]} url URL string as a character arra which will be updated in place
  * @return {string[]}     Updated URL character array
@@ -41,5 +41,6 @@ export function encodeSpaces(url) {
   }
 
   // Return result. Tests expect it to be in array form, not string, so split at "".
+  console.log(result.split(""));
   return result.split("");
 }
