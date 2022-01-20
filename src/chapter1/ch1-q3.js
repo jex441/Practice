@@ -12,5 +12,14 @@
  * @return {string[]}     Updated URL character array
  */
 export function encodeSpaces(url) {
-  console.log(url);
+  let map = {};
+
+  for (let i = 0; i < url.length; i++) {
+    if (url[i] === " ") {
+      map[i] = "%20";
+    } else {
+      map[i] = url[i];
+    }
+  }
+  console.log(map);
 }
