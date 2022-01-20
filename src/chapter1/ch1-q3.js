@@ -12,11 +12,8 @@
  */
 export function encodeSpaces(url) {
   //Edge cases
-  if (url === undefined) {
-    return undefined;
-  }
-  if (url === null) {
-    return null;
+  if (!url || !url.length) {
+    return url;
   }
 
   // Empty object for map
