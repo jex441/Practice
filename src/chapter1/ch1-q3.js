@@ -9,36 +9,60 @@
  * @param  {string[]} url URL string as a character arra which will be updated in place
  * @return {string[]}     Updated URL character array
  */
+// export function encodeSpaces(url) {
+//   //Edge cases
+//   if (!url || !url.length) {
+//     return url;
+//   }
+
+//   // Empty object for map
+//   let map = {};
+
+//   // Loop through string, add it to map with a key that is its place in the string
+//   // If it is a space, log it in the map as %20 instead of " "
+//   for (let i = 0; i < url.length; i++) {
+//     if (url[i] === " ") {
+//       map[i] = "%20";
+//     } else {
+//       map[i] = url[i];
+//     }
+//   }
+
+//   // Empty string for result
+//   let result = "";
+
+//   // Build the string based on the key value pairing of the map
+//   for (let key in map) {
+//     result += map[key];
+//   }
+
+//   // Return result. Tests expect it to be in array form, not string, so split at "".
+//   return result.split("");
+// }
+
+// Estimate of time complexity: O(n * 2)
+// This is due to the fact that the length of the variable (url) is traversed two times.
+
+// O(n) time complexity solution:
 export function encodeSpaces(url) {
   //Edge cases
   if (!url || !url.length) {
     return url;
   }
 
-  // Empty object for map
-  let map = {};
+  // Empty array for result
+  let result = [];
 
-  // Loop through string, add it to map with a key that is its place in the string
-  // If it is a space, log it in the map as %20 instead of " "
+  // For each character in url, push it to result, if it is a " ", push %,2, and 0.
   for (let i = 0; i < url.length; i++) {
     if (url[i] === " ") {
-      map[i] = "%20";
+      result.push("%");
+      result.push("2");
+      result.push("0");
     } else {
-      map[i] = url[i];
+      result.push(url[i]);
     }
   }
 
-  // Empty string for result
-  let result = "";
-
-  // Build the string based on the key value pairing of the map
-  for (let key in map) {
-    result += map[key];
-  }
-
-  // Return result. Tests expect it to be in array form, not string, so split at "".
-  return result.split("");
+  return result;
 }
-
-// Estimate of time complexity: O(n * 2)
-// This is due to the fact that the length of the variable (url) is traversed two times.
