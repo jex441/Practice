@@ -63,6 +63,6 @@ export function compressString(str) {
     return str;
   }
 
-  // Otherwise return the result as a string by splitting it
+  // Otherwise return the result as a string by joining it
   return result.join("");
 }
