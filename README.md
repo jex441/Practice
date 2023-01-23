@@ -1,4 +1,4 @@
-# Cracking the Coding Interview Unit Tests *
+# Cracking the Coding Interview Unit Tests
 
 These are my solutions in Javascript to questions in Cracking the Coding Interview.
 
